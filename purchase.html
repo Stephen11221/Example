@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container-lg">
+        <nav class="navbar bg-white fixed-top navbar-expand-lg text-light shadow navbar-light">
+            <div class="">
+                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse   " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto text-light ">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link"><span><i class="fa fa-home"></i></span>Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin.html" class="nav-link">
+                                <span><i class="fa fa-user"></i></span>
+                                Admin
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="event.html" class="nav-link">
+                                <span><i class="fa fa-calendar"></i></span>
+                                event
+                                <i class="fa fa-plus btn btn-secondary float-end"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="promoter.html" class="nav-link">
+                                <span><i class="fa fa-microphone "></i></span>
+                                promoter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div> <br> <br> <br> <br>
+    <section class="container-lg p-3 bg-light">
+        <v class="container">
+            <h3>Welcome to purchase ticket</h3>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form action="" method="post">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="">Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="">Email</label>
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label for="">Event Title</label>
+                                <input type="text" class="form-control" id="">
+                    
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <label for="">Payment Method</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">Mpesa</option>
+                                    <option value="">Equity</option>
+                                    <option value="">Paypal</option>
+                                    <option value="">Kcb Bank</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <label for="">Account number/ phone/mpesa number</label>
+                                <input type="number" class="form-control">
+                            </div>
+                        </div> <br> <br>
+                        <button class="btn btn-success text-muted">BUY TICKET</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="text-muted">SCAN QR CODE</h6>
+                    <form action="">
+                        <input type="text" name="" id="nameQR" class="form-control">
+                        <div id="imgBox" class="imageBOX">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" style="margin-top: 30px ; margin-bottom: 10x ; margin-left: 10px; border: 2px solid blue;" id="qrImg" alt="">
+                        </div> <br>
+                        <button onclick="generateQR()" class="btn btn-primary">Generate Code <i class="fa fa-find"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <script>
+        let imgBox =document.getElementById("imgBox");
+        let qrImg= document.getElementById("qrImg");
+        let nameQR = document.getElementById("nameQR");
+        
+        function generateQR(){
+            qrImg.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+ nameQR .value;
+        }
+    </script>
+    <script src="bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js.map"></script>
+    <script type="module" src="bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
