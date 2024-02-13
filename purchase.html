@@ -82,6 +82,7 @@
                                     <option value="">Kcb Bank</option>
                                 </select>
                             </div>
+
                         </div>
                         <div class="row">
                             <div class="col-lg-4">
@@ -89,31 +90,31 @@
                                 <input type="number" class="form-control">
                             </div>
                         </div> <br> <br>
-                        <button class="btn btn-success text-muted">BUY TICKET</button>
+                        <button class="btn btn-success text-light">Buy Ticket</button>
                     </form>
                 </div>
                 <div class="col-lg-6">
                     <h6 class="text-muted">SCAN QR CODE</h6>
-                    <form action="">
+                    <div action="">
                         <input type="text" name="" id="nameQR" class="form-control">
                         <div id="imgBox" class="imageBOX">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" style="margin-top: 30px ; margin-bottom: 10x ; margin-left: 10px; border: 2px solid blue;" id="qrImg" alt="">
+                            <img src="" style="margin-top: 30px ; margin-bottom: 10x ; margin-left: 10px; border: 2px solid blue;" id="qrImg" alt="">
                         </div> <br>
-                        <button onclick="generateQR()" class="btn btn-primary">Generate Code <i class="fa fa-find"></i></button>
-                    </form>
+                        <button onclick="generateQR()" class="btn btn-primary text-light">Generate Code <i class="fa fa-find"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
         
     </section>
     <script>
-        let imgBox =document.getElementById("imgBox");
-        let qrImg= document.getElementById("qrImg");
-        let nameQR = document.getElementById("nameQR");
-        
+    
         function generateQR(){
-            qrImg.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+ nameQR .value;
+            
+            let name= document.getElementById("nameQR").value;
+            document.getElementById("imgBOX").src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example";
         }
+            
     </script>
     <script src="bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js.map"></script>
     <script type="module" src="bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
